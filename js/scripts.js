@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#mycarousel").carousel( { interval: 1000 } );
+    $("#mycarousel").carousel( { interval: 2000 } );
     $("#carousel-button").click(function(){
         if ($("#carousel-button").children("span").hasClass('fa-pause')) {
             $("#mycarousel").carousel('pause');
@@ -15,5 +15,11 @@ $(document).ready(function(){
             $("#carousel-button").children("span").addClass('fa-pause');    
             $("#carousel-button").addClass('btn-danger');                
         }
+    });
+    $("#loginButton").click(function(){
+        $("#loginModal").modal('toggle');
+    });
+    $("#reserveButton").click(function(){
+        $("#retableModal").modal('show');
     });
 });
